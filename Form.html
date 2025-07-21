@@ -1,0 +1,79 @@
+<html>
+<head> <title> Hello World </title> 
+ <style>
+ h1{color:red; background:pink; border:outset 2px black; text-align:center;}
+ table{width:50%;}
+ </style>
+</head> 
+           <body bgcolor="skyblue">
+            <h1> Please Fill Correct Detail</h1>
+             <form action="DivHover.html"target=" blank" align="center" name="Fomr" onsubmit="return FomrV()" >
+              <table cellpadding="10" border="2" align="center">
+            <tr> <td> <lable> First Name <br>
+             <td> <input type="text" name="FirstName" Placeholder="First Name" id="Fname"> </lable> <br> </tr> </td>
+            <tr> <td>  <lable> Middle Name <br>
+             <td> <input type="text" name="SecondName" Placeholder="Second Name" id="Sname" required/> </lable> <br> </tr> </td>
+            <tr> <td> <lable> Last Name <br>
+             <td> <input type="text" name="Last Name" Placeholder="Last Name" id="Lname"required/> </lable> <br> </tr> </td>
+            <tr> <td> <lable> Father Name <br>
+             <td> <input type="text" name="Father Name" Placeholder="Father Name" id="Aname"required/> </lable> <br> </tr> </td>
+            <tr> <td> <lable> Aadhar Number <br>
+             <td> <input type="adhaar" name="Adhaarnumber" maxlength="12" pattern="[0-9]{4}[0-9]{4}[0-9]{4}"Placeholder="Aadhar Number" id="Dname"required/> </lable> <br> </tr> </td>
+             <tr> <td> <lable> PAN(Permanent Account Number)<br>
+             <td> <input type="pan" name="pannumber" maxlength="10" Placeholder="Exa. ABCD1234E" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" onkeyup="myCase()" id="Pname"required/> </lable><br> </tr> </td>
+             <tr> <td> <lable> Gender <br>
+            <td> <input type="radio" name="gender" id="Gname">Male </lable> <br>
+            <input type="radio" name="gender" id="G1name">Female </lable> <br>
+            <input type="radio" name="gender" id="G2name">Other </lable> <br> </tr> </td>
+            <tr> <td> <lable> Your Country<br>
+            <td> <select id="Cname" onchange="mycountry()">
+            <option value="<b>INDIA</b>"> India </option>
+             <option value="<b>USA</b>"> USA </option>
+              <option value="<b>JAPAN</b>"> Japan </option>
+               <option value="NEPAL</b>"> Nepal </option>
+               <option value="<b>CHINA</b>"> China </option>
+             <option value="<b>AMERICA</b>"> America </option> 
+                 </select> </lable> <br> 
+             <p id="para"> </p> </tr> </td>
+             <tr> <td> <lable> Time <br>
+            <td> <input type="time" name="time" id="Tname"> </lable> <br> </tr> </td>
+            <tr> <td>  <lable> Date <br>
+              <td> <input type="date" name="date" id="Dname"> </lable> <br> </tr> </td>
+             <tr> <td> <lable> Upload Image <br>
+             <td> <input type="file" name="image" id="Iname"> </lable> <br> </tr> </td>
+             <tr> <td> <lable> Live Photo(optional)<br>
+             <td> <input type="file" name="image" capture="user" id="Lname"><br>
+            <tr> <td>  <lable> Choose Course <br>
+             <td> <input type="checkbox" name="course1" id="Cname"> O-Level</lable> <br>
+             <input type="checkbox" name="course2" id="C1name">A-Level</lable> <br>
+             <input type="checkbox" name="course3" id="C3name">B-Level</lable> <br>
+             <input type="checkbox" name="course4" id="C4name">Other</lable> <br>
+             <tr> <td colspan="10" align="center"> 
+             Submit Your Detail<br>
+             <button> SUBMIT </button>  </tr> </td>
+             </form>
+             <tr> <td colspan="10" align="center"> Support<br>
+             <ol>
+             <li> <a href="https://web.telegram.org" target=" blank" > Telegram </a>
+             <li> <a href="" target=" blank" > WhatsApp </a>
+             </ol> </tr> </td> </table> 
+             <script> 
+             function mycountry()
+             {var country=document.getElementById("Cname").value;
+             document.getElementById("para").innerHTML="<i>You Selected</i>"+"=>"+country;}
+              function myCase()
+              {var Case=document.getElementById("Pname");
+               Case.value=Case.value.toUpperCase();}
+               function FomrV()
+               {var FirsT=document.forms["Fomr"]["FirstName"].value;
+                 if(FirsT==""){alert("Please Enter First Name");
+                   return false;}
+                   else {alert("Your SignUp Successfully");}}
+               
+               
+               </script>
+               </body> 
+               </html>
+          
+              
+            
